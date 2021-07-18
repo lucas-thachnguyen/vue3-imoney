@@ -12,9 +12,8 @@ import { PUBLIC_LAYOUT } from "@/contants";
 export default {
   setup() {
     const route = useRoute();
-    console.log(route);
     return {
-      layout: computed(() => route.meta.layout || PUBLIC_LAYOUT + "-layout"),
+      layout: computed(() => (route.meta.layout || PUBLIC_LAYOUT) + "-layout"),
     };
   },
 };
